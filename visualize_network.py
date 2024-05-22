@@ -101,7 +101,7 @@ def main(target_number):
         freq_loss = pixel_frequency_loss(image())
         loss = 0.3*freq_loss + prob_loss
         if i % 500 == 0:
-            print(f"Freq Loss Step {i}: {0.5*freq_loss.item()}")
+            print(f"Freq Loss Step {i}: {0.3*freq_loss.item()}")
             print(f"Prob Loss Step {i}: {prob_loss.item()}")
             print(f"Total Loss Step {i}: {loss.item()}")
         optimizer.zero_grad()
